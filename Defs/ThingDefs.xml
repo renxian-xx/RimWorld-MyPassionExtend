@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--继承“安装目录\Data\Core\Defs\ThingDefs_Items\Items_Resource_Base.xml”中的ResourceBase-->
+    <ThingDef ParentName="ResourceBase">
+        <!--定义名称-->
+        <defName>PassionBooster</defName>
+        <!--物品名称-->
+        <label>passion booster</label>
+        <!--使用后能够提升人对技能的兴趣-->
+        <description>When used, it can increase people's passion in skills.</description>
+        <!--复用精神训练器的素材-->
+        <graphicData>
+            <texPath>Things/Item/Special/MechSerumNeurotrainer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <!--耐久度-->
+            <MaxHitPoints>100</MaxHitPoints>
+            <!--市场价值-->
+            <MarketValue>1000</MarketValue>
+            <!--质量-->
+            <Mass>2</Mass>
+            <!--可燃-->
+            <Flammability>1</Flammability>
+        </statBases>
+        <!--归类：其他-->
+        <thingCategories>
+            <li>ItemsMisc</li>
+        </thingCategories>
+        <!--物品集生成标签：高频回报，用于任务奖励-->
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+        <!--相关组件-->
+        <comps>
+            <!--让物品能够被使用-->
+            <li Class="CompProperties_Usable">
+                <!--引用JobDefs中定义-->
+                <useJob>UsePassionBooster</useJob>
+                <!--标签：使用兴趣提升器，{0_label}会被替换为物品名称-->
+                <useLabel>Use {0_label}</useLabel>
+            </li>
+            <!--使用效果-->
+            <li Class="CompProperties_UseEffect">
+                <!--引用编写的组件（命名空间.类名）-->
+                <compClass>MyPassionExtendSource.Comp_PassionBooster</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

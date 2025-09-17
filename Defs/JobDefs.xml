@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <JobDef>
+        <defName>UsePassionBooster</defName>
+        <!--驱动类-->
+        <driverClass>JobDriver_UseItem</driverClass>
+        <!--指派任务后小人的状态说明，TargetA会替换为使用的物品的名称-->
+        <reportString>using TargetA.</reportString>
+        <!--允许可能的前缀：xxx正在干什么-->
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+</Defs>

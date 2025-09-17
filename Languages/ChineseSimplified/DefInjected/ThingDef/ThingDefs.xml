@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!--对PassionBooster的名称进行翻译-->
+    <PassionBooster.label>兴趣提升器</PassionBooster.label>
+    <!--对PassionBooster的描述进行翻译-->
+    <PassionBooster.description>使用后能够提升人对技能的兴趣</PassionBooster.description>
+    <!--对PassionBooster的使用标签进行翻译-->
+    <PassionBooster.comps.CompUsable.useLabel>使用{0_label}</PassionBooster.comps.CompUsable.useLabel>
+</LanguageData>

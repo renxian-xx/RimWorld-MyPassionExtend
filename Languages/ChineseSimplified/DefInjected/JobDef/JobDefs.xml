@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!--对UsePassionBooster的使用状态进行翻译-->
+    <UsePassionBooster.reportString>正在使用TargetA。</UsePassionBooster.reportString>
+</LanguageData>

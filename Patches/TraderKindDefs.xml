@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!--外来殖民者的基地售卖0~1个-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/TraderKindDef[defName = "Base_Outlander_Standard"]/stockGenerators</xpath>
+        <value>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>PassionBooster</thingDef>
+                <countRange>0~1</countRange>
+            </li>
+        </value>
+    </Operation>
+
+    <!--外来殖民者的稀有品远征贸易商和稀有品飞船贸易售卖1~2个-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_Exotic" or defName = "Orbital_Exotic"]/stockGenerators</xpath>
+        <value>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>PassionBooster</thingDef>
+                <countRange>1~2</countRange>
+            </li>
+        </value>
+    </Operation>
+
+
+    <!--有皇权DLC的情况下，让帝国的基地、远征贸易商、飞船贸易商都售卖1~2个-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Royalty</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/TraderKindDef[defName = "Base_Empire_Standard" or defName = "Empire_Caravan_TraderGeneral" or defName = "Orbital_Empire"]/stockGenerators</xpath>
+            <value>
+                <li Class="StockGenerator_SingleDef">
+                    <thingDef>PassionBooster</thingDef>
+                    <countRange>1~2</countRange>
+                </li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

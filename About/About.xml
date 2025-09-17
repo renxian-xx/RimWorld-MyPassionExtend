@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+    <name>人物兴趣拓展</name> <!--模组名称-->
+    <description>人物兴趣拓展</description> <!--模组描述-->
+    <author>RenXian</author> <!--作者-->
+    <supportedVersions> <!--支持的版本-->
+        <li>1.4</li>
+        <li>1.5</li>
+    </supportedVersions>
+    <packageId>RenXian.MyPassionExtend</packageId> <!--包名-->
+</ModMetaData>
